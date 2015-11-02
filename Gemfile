@@ -43,3 +43,4 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable.git'

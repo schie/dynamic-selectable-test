@@ -1,0 +1,58 @@
+<div class="col-md-4 col-md-offset-4 well">
+  <legend>New vehicle</legend>
+  <%= form_for(@vehicle) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label :year %>
+      <%= f.select :year, (1930..2016).to_a.reverse, { prompt: 'Select year' }, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= label_tag :vehicle_make_id, 'Make'  %>
+      <%= dynamic_collection_select :vehicle, :make_id, :model, Make.all, :id, :name,
+        { include_blank: true, submit_with_form: true }, { class: 'form-control'} %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :model_id %>
+      <%= f.collection_select :model_id, [], :id, :name, {}, { class: 'form-control' } %>
+    </div>
+
+    <div class="row">
+      <hr />
+      <div class="text-center">
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
+        <%= f.submit 'Reset', type: 'reset', class: 'btn btn-default' %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% if @vehicles.present? %>
+  <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-info">
+      <div class="panel-heading clearfix">
+        <h3 class="panel-title pull-left">My vehicles</h3>
+      </div>
+      <table class="table table-stirped">
+        <tr>
+          <th>Name</th>
+          <th>Year</th>
+          <th>Make</th>
+          <th>Model</th>
+        </tr>
+        <% @vehicles.each do |vehicle| %>
+          <tr>
+            <td><%= vehicle.name %></td>
+            <td><%= vehicle.year %></td>
+            <td><%= vehicle.make.name %></td>
+            <td><%= vehicle.model.name %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+<% end %>

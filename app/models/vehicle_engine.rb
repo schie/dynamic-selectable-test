@@ -1,15 +1,14 @@
 # == Schema Information
 #
-# Table name: models
+# Table name: engines
 #
 #  id         :integer          not null, primary key
 #  name       :string
-#  make_id    :integer
+#  model_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Model < ActiveRecord::Base
-  belongs_to :make
-  has_many   :vehicle_engines
+class VehicleEngine < ActiveRecord::Base
+  belongs_to :model
 end

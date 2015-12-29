@@ -43,7 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'dynamic_selectable', path: '~/ruby/gems/dynamic_selectable'
+gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable.git'
 
 gem 'bootstrap-sass'
 gem 'annotate'

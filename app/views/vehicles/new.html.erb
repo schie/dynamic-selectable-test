@@ -1,17 +1,19 @@
 <div class="col-md-4 col-md-offset-4 well">
   <legend>New vehicle</legend>
+
   <%= form_for(@vehicle) do |f| %>
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
     </div>
+
     <div class="form-group">
       <%= f.label :year %>
       <%= f.select :year, (1930..2016).to_a.reverse, { prompt: 'Select year' }, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <%= label_tag :vehicle_make_id, 'Make'  %>
+      <%= f.label :make_id %>
       <%= dynamic_collection_select :vehicle, :make_id, :model, Make.all, :id, :name,
         { include_blank: true, submit_with_form: true }, { class: 'form-control' } %>
     </div>

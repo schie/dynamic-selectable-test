@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.1'
+gem 'rails', '5.0.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -43,7 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable.git'
+#gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable.git'
 
 gem 'bootstrap-sass'
 gem 'annotate'

@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/atni/dynamic_selectable.git
+  revision: 32cebce375b6974be98eb52707e3f4d2d6549aae
+  specs:
+    dynamic_selectable (1.1.0)
+      coffee-script (~> 2.3)
+      rails (>= 4.1, < 6.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -169,6 +177,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   coffee-rails (~> 4.1.0)
+  dynamic_selectable!
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 5.0.0.1)

@@ -43,7 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable.git'
+gem 'dynamic_selectable', git: 'https://github.com/atni/dynamic_selectable', branch: 'turbolinks-5-compatibility'
 
 gem 'bootstrap-sass'
 gem 'annotate'

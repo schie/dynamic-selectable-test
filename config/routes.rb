@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get 'makes/:make_id/models', to: 'make_models#index', as: :make_models
   end
 
-  resources :vehicles, only: [:new, :create]
+  resources :vehicles, only: [:index, :new, :create]
 
   root 'vehicles#new'
 end

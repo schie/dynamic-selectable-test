@@ -1,4 +1,7 @@
 class VehiclesController < ApplicationController
+  def index
+  end
+
   def new
     @vehicle = Vehicle.new
     @vehicle.build_model
